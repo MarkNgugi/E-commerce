@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
-def homepage(request):
-    homepage = "<H1>CONTENT WILL BE ADDED SOON<H1>"
-    return HttpResponse(homepage)
+def homecategories(request):
+    categories = Category.objects.all()
+    context = {'categories':categories}
+    return render(request,'shop/home.html',context)
+
 
 
