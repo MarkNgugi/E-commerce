@@ -6,6 +6,8 @@
     <title>Sell-products</title>
 </head>
 <body>
+    <h3><a href="{%url 'homemain'%}">Home</a></h3>
+    <hr>
     <form method='post' action="">
         {%csrf_token%}
         {{productsellform.as_p}}

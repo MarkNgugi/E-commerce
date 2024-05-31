@@ -13,7 +13,16 @@ def shopmain(request):
 
     return render(request,'shop/shopmain.html',context)
 
-def sellproducts(request):
+def category_details(request,slug):
+    category = Category.objects.get(slug=slug)
+    products=category.products.all()
+    context={
+        'products':products,
+        'categories':category
+             }
+    return render(request,'shop/category_details.html',context)
+
+def add_product(request):
 
     if request.method=='POST':
         productsellform=ProductSellForm(request.POST)
