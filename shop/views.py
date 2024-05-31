@@ -22,7 +22,6 @@ def sellproducts(request):
             return redirect('successpage')
         else:
             pass
-
     else:
         productsellform=ProductSellForm()
 
