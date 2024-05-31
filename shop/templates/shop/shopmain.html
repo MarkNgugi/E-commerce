@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+    <h1>Welcome to the E-commerce website</h1>
+    <a href="">Login</a>
+    <a href="">Sell Products</a>
+    <h2>All Categories</h2>
+
+    <ul>
+
+        {% for category in categories%}
+        <li><a href="">{{category.name}}</a></li>
+        {%endfor%}
+    </ul>
+</body>
+</html>
