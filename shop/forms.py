@@ -1,8 +1,8 @@
+from django.forms import ModelForm
 from django import forms
+from .models import *
 
-class ProductSellForm(forms.form):
-    category=forms.CharField()
-    productname=forms.CharField(max_length=100)
-    description=forms.TimeField()
-    price=forms.DecimalField()
-    stock=forms.PositiveIntegerField()
+class ProductSellForm(ModelForm):
+    class Meta:
+        model=Product
+        exclude=['slug','available','created','updated']
