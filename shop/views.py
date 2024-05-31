@@ -12,5 +12,10 @@ def shopmain(request):
 
     return render(request,'shop/shopmain.html',context)
 
+def sellproducts(request):
+    context={}
+    return render(request,'shop/sellproducts.html',context)
+    
+
 
 
