@@ -10,9 +10,9 @@
     <h1>Your Shopping Cart</h1>
     <ul>
         {% for item in cart.items.all %}
-            <li>{{ item.quantity }} x {{ item.product.name }} - ${{ item.get_total_price }}</li> <hr>
+            <li>{{ item.quantity }} x {{ item.product.name }} - Ksh.{{ item.get_total_price }}</li> <hr>
         {% endfor %}
     </ul>
-    <p>Total: ${{ total_price }}</p>
+    <p>Total: Ksh.{{ total_price }}</p>
 </body>
 </html>
